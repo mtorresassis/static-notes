@@ -1,0 +1,2 @@
+# static-notes
+Static page
