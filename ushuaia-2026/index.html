@@ -674,6 +674,24 @@
     color: var(--ink-faint);
   }
 
+  /* ---------- Nota pessoal (aside solto na timeline, tipo bilhete) ---------- */
+  .tl-item.tl-note { padding-left: 46px; margin-bottom: 22px; }
+  .tl-note-card {
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 40ch;
+    box-shadow: var(--shadow);
+    transform: rotate(-1.1deg);
+  }
+  .tl-note-card .icon { margin-right: 0.3em; color: var(--accent, var(--glacier)); }
+  .tl-note-card b { color: var(--accent, var(--glacier)); }
+  .tl-item.tl-note:nth-of-type(even) .tl-note-card { transform: rotate(1deg); }
+
   .profile-intro { margin-top: 18px; color: var(--ink-soft); max-width: 62ch; }
   .profile-intro strong { color: var(--ink); }
 
@@ -816,6 +834,7 @@
     <symbol id="ic-walk" viewBox="0 0 24 24"><circle cx="12.3" cy="4.6" r="1.7"/><path d="M12 7.2v5.6l-3 8M12.6 12.8l2.6 7.6M9.2 10.8l-2.3 3M14.6 10.8l2.3 3"/></symbol>
     <symbol id="ic-cup" viewBox="0 0 24 24"><path d="M5.5 9h11.5v6.2A5 5 0 0112 20.2h-1.3A5 5 0 015.5 15.2z"/><path d="M17 10.6h1.7a2.4 2.4 0 010 4.8H17"/><path d="M8.6 5c0-1 1-1 1-2M11.8 5c0-1 1-1 1-2"/></symbol>
     <symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/></symbol>
+    <symbol id="ic-cross" viewBox="0 0 24 24"><path d="M12 2v20M6 8h12"/></symbol>
   </defs>
 </svg>
 
@@ -1034,6 +1053,14 @@
         <div class="tl-time">lanche</div>
         <div class="tl-title"><a class="tl-title-link" href="https://tantesara.com/" target="_blank" rel="noopener">Tante Sara</a> <a class="tl-geo" href="https://www.google.com/maps/search/?api=1&query=Tante+Sara+Av+San+Martin+175+Ushuaia" target="_blank" rel="noopener" aria-label="Abrir localização" title="Abrir localização"><svg class="icon"><use href="#ic-target"/></svg></a></div>
         <div class="tl-desc">Chocolate quente e tortas.</div>      </div>
+      <div class="tl-item"><div class="tl-badge"><svg class="icon"><use href="#ic-cross"/></svg></div>
+        <div class="tl-time">19:00</div>
+        <div class="tl-title"><a class="tl-title-link" href="https://www.facebook.com/lamercedushuaia/" target="_blank" rel="noopener">Missa — Nuestra Señora de la Merced</a> <a class="tl-geo" href="https://www.google.com/maps/search/?api=1&query=Av+San+Martin+936+Ushuaia" target="_blank" rel="noopener" aria-label="Abrir localização" title="Abrir localização"><svg class="icon"><use href="#ic-target"/></svg></a></div>
+        <div class="tl-desc">Av. San Martín 936, igreja histórica de 1898. Horário confirmado direto com a paróquia (10/08/2026).</div>
+      </div>
+      <div class="tl-item tl-note">
+        <div class="tl-note-card"><svg class="icon"><use href="#ic-cross"/></svg><b>Momento de fé.</b> Um espaço pra encontrar com Deus e agradecer pela viagem — pai e filho, juntos no fim do mundo.</div>
+      </div>
       <div class="tl-item"><div class="tl-badge"><svg class="icon"><use href="#ic-fork"/></svg></div>
         <div class="tl-time">jantar especial</div>
         <div class="tl-title"><a class="tl-title-link" href="https://kaupe.com.ar/" target="_blank" rel="noopener">Kaupé</a> <a class="tl-geo" href="https://www.google.com/maps/search/?api=1&query=Kaupe+Restaurant+Roca+470+Ushuaia" target="_blank" rel="noopener" aria-label="Abrir localização" title="Abrir localização"><svg class="icon"><use href="#ic-target"/></svg></a></div>
