@@ -1296,6 +1296,24 @@
         panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-day') === day); });
       });
     });
+
+    // Ao abrir, seleciona a aba do dia atual (viagem: 09-14/08/2026). Antes da viagem
+    // mantém a aba inicial (d09); depois do dia 14 fixa na última (d14).
+    var now = new Date();
+    var todayKey = null;
+    if (now.getFullYear() === 2026 && now.getMonth() === 7) {
+      if (now.getDate() >= 9 && now.getDate() <= 14) {
+        todayKey = 'd' + (now.getDate() < 10 ? '0' + now.getDate() : now.getDate());
+      } else if (now.getDate() > 14) {
+        todayKey = 'd14';
+      }
+    } else if (now.getFullYear() > 2026 || (now.getFullYear() === 2026 && now.getMonth() > 7)) {
+      todayKey = 'd14';
+    }
+    if (todayKey) {
+      var todayTab = document.querySelector('.tab[data-day="' + todayKey + '"]');
+      if (todayTab) todayTab.click();
+    }
   })();
 </script>
 </body>
